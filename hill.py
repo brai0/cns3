@@ -12,7 +12,7 @@ if (len(key)==9):
     keyMatrix= key.reshape(3,3)
 
 while(len(plainText)%size!=0):
-    plainText.append("x")
+    plainText+='x'
 
 plainText=np.array([ord(a)-97 for a in plainText])
 plainTextMatrix=np.array_split(plainText,len(plainText)/size)
